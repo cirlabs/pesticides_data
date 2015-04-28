@@ -46,8 +46,7 @@
 
 <p>These grids sometimes cross county lines. In the PUR data, to get the total applied across the whole grid, you will need to use the sum of the two segments. We have kept the two segments separate in reporting the PUR data because it allows us the most granular data possible on the map. Please note: This is handled differently in our 1,3-D data from Dow, as you may read below.</p>
 
-<h3>
-<a id="whats-in-the-data" class="anchor" href="#whats-in-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's in the data?</h3>
+<h3><a id="whats-in-the-data" class="anchor" href="#whats-in-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's in the data?</h3>
 
 <table class="docs">
 <tr>
@@ -61,21 +60,6 @@
   <td>Primary key</td>
 </tr>
 <tr>
-  <td>application_count_all_chemical</td>
-  <td>Integer</td>
-  <td></td>
-</tr>
-<tr>
-  <td>application_count_concern</td>
-  <td>Integer</td>
-  <td></td>
-</tr>
-<tr>
-  <td>application_count_fumigants</td>
-  <td>Integer</td>
-  <td></td>
-</tr>
-<tr>
   <td>total_lbs_used_all_chemical</td>
   <td>Integer</td>
   <td>Includes all chemicals, including many that pose no known human health risks.</td>
@@ -83,7 +67,7 @@
 <tr>
   <td>total_lbs_used_concern_chemical</td>
   <td>Integer</td>
-  <td>Includes all "chemicals of concern," XXXXX</td>
+  <td>Includes all chemicals of public health concern, which were identified by the California Department of Public Health in a <a href="http://cehtp.org/projects/ehss01/pesticides_and_schools/Pesticides_Schools_Report_April2014.pdf">2014 report</a> about pesticide use near schools. The report's authors considered the chemicals to be of concern because they fall into at least one of six categories: chemicals that may cause cancer, chemicals that may cause developmental issues, neurotoxins, air pollutants, fumigants and chemicals considered risky by the state for other reasons.</td>
 </tr>
 <tr>
   <td>total_lbs_used_fumigants_chemical</td>
@@ -93,33 +77,91 @@
 <tr>
   <td>base_ln_me</td>
   <td>String</td>
-  <td>Example: M</td>
+  <td>Baseline meridian of this grid. Example: M</td>
 </tr>
 <tr>
   <td>township</td>
   <td>String</td>
-  <td>Example: 44N</td>
+  <td>Township of this grid, with direction. Example: 44N</td>
 </tr>
 <tr>
   <td>range</td>
   <td>String</td>
-  <td>Example: 09W</td>
+  <td>Range of this grid, with direction. Example: 09W</td>
 </tr>
 <tr>
   <td>section</td>
   <td>String</td>
-  <td>Example: 11</td>
+  <td>Section of this grid. Example: 11</td>
 </tr>
 <tr>
   <td>county_cd</td>
   <td>String</td>
-  <td>XXXX Example: 47</td>
+  <td>The Department of Pesticide Regulation's code for the county the grid is located in. Note: Does NOT match U.S. Census FIPS codes. Example: 47</td>
 </tr>
 <tr>
   <td>county_name</td>
   <td>String</td>
-  <td>Example: SISKIYOU</td>
+  <td>The county name of the grid, in all caps. Example: SISKIYOU</td>
 </tr>
+<tr>
+  <td>top_chemicals</td>
+  <td>Array/JSON object</td>
+  <td>See below</td>
+</tr>
+<tr>
+  <td>top_chemicals_of_concern</td>
+  <td>Array/JSON object</td>
+  <td>See below</td>
+</tr>
+</table>
+
+<h4>Top chemicals</h4>
+<table>
+  <tr>
+    <th>Attribute name</th>
+    <th>Data type</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>chem_id</td>
+    <td>Integer</td>
+    <td>Primary key of chemical, not the Department of Pesticide Regulation's code.</td>
+  </tr>
+  <tr>
+    <td>chem_name</td>
+    <td>String</td>
+    <td>In all caps.</td>
+  </tr>
+  <tr>
+    <td>lbs</td>
+    <td>Integer</td>
+    <td>Rounded to nearest integer.</td>
+  </tr>
+</table>
+
+<h4>Top chemicals of concern</h4>
+<table>
+  <tr>
+    <th>Attribute name</th>
+    <th>Data type</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>chem_id</td>
+    <td>Integer</td>
+    <td>Primary key of chemical, not the Department of Pesticide Regulation's code.</td>
+  </tr>
+  <tr>
+    <td>chem_name</td>
+    <td>String</td>
+    <td>In all caps.</td>
+  </tr>
+  <tr>
+    <td>lbs</td>
+    <td>Integer</td>
+    <td>Rounded to nearest integer.</td>
+  </tr>
 </table>
 
 <h2>
@@ -137,6 +179,66 @@
 <p>The 1,3-D regulatory limits are based on the larger "metagrids," or Baseline meridian/township/range combinations. Those grids are generally about 6 square miles in area, though the sizes at times vary considerably.</p>
 
 <p>These grids sometimes cross county lines. In the 1,3-D data, both segments of a grid that crosses county lines will show the same number of adjusted pounds. This is because the regulatory limit for 1,3-D is based on the grid as a whole, even though each county is responsible for reporting data about its segment separately. Please note: This is handled differently in our PUR data, as you may read above.</p>
+
+<h3><a id="whats-in-the-data" class="anchor" href="#whats-in-the-data-13d" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's in the data?</h3>
+
+<table class="docs">
+<tr>
+  <th>Attribute</th>
+  <th>Data type</th>
+  <th>Notes</th>
+</tr>
+<tr>
+    <td>id</td>
+    <td>Integer</td>
+    <td>Primary key of this metagrid.</td>
+</tr>
+<tr>
+    <td>telone_draw</td>
+    <td>Integer</td>
+    <td>How many pounds of 1,3-D were applied in this metagrid.</td>
+</tr>
+<tr>
+    <td>telone_overage</td>
+    <td>Integer</td>
+    <td>How many pounds over 90,250 adjusted pounds in a year were applied in this metagrid. For example, if 100,000 pounds were applied in 2003 and 120,000 pounds in 2004, the telone_overage would be 9,750 pounds + 29,750 pounds, or 39,500 pounds.</td>
+</tr>
+<tr>
+    <td>telone_years_exceeding</td>
+    <td>Integer</td>
+    <td>In how many years were more than 90,250 pounds of 1,3-D applied in this metagrid.</td>
+</tr>
+<tr>
+    <td>telone_banked_balance</td>
+    <td>Integer</td>
+    <td>Using Dow's system for "banking" 1,3-D usage limits, how many pounds of 1,3-D were left in the bank at the end of 2012. May be negative.</td>
+</tr>
+<tr>
+    <td>telone_years_double_exceeding</td>
+    <td>Integer</td>
+    <td>In how many years were more than 180,500 pounds of 1,3-D applied in this metagrid.</td>
+</tr>
+<tr>
+    <td>telone_banked_years_exceeding</td>
+    <td>Integer</td>
+    <td>Using Dow's system for "banking" 1,3-D usage limits, in how many years did this metagrid's "bank" go into the red.</td>
+</tr>
+<tr>
+  <td>base_ln_me</td>
+  <td>String</td>
+  <td>Baseline meridian of this grid. Example: M</td>
+</tr>
+<tr>
+  <td>township</td>
+  <td>String</td>
+  <td>Township of this grid, with direction. Example: 44N</td>
+</tr>
+<tr>
+  <td>range</td>
+  <td>String</td>
+  <td>Range of this grid, with direction. Example: 09W</td>
+</tr>
+</table>
       </section>
     </div>
 
@@ -148,16 +250,16 @@
       </footer>
     </div>
 
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-2147301-25");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-2147301-25");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
 
 
   </body>
