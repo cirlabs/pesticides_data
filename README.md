@@ -1,14 +1,14 @@
 ## Files
 
 All in the data directory:
-- cagrids_cached.json
-- cagrids_cached shapefile
+- [cagrids_cached.json](https://github.com/cirlabs/pesticides_data/blob/gh-pages/data/cagrids_cached.json)
+- [cagrids_cached shapefile](https://github.com/cirlabs/pesticides_data/blob/gh-pages/data/cagrids_cached)
 
-- cametagrids_cached.json
-- cametagrids_cached shapefile
+- [cametagrids_cached.json](https://github.com/cirlabs/pesticides_data/blob/gh-pages/data/cametagrids_cached.json)
+- [cametagrids_cached shapefile](https://github.com/cirlabs/pesticides_data/blob/gh-pages/data/cametagrids_cached)
 
-- telone_cached.json
-- telone_cached shapefile
+- [telone_cached.json](https://github.com/cirlabs/pesticides_data/blob/gh-pages/data/telone_cached.json)
+- [telone_cached shapefile](https://github.com/cirlabs/pesticides_data/blob/gh-pages/data/telone_cached)
 
 ## Documenation
 
