@@ -1,3 +1,15 @@
+## Files
+
+All in the data directory:
+-cagrids_cached.json
+-cagrids_cached shapefile
+
+-cametagrids_cached.json
+-cametagrids_cached shapefile
+
+-telone_cached.json
+-telone_cached shapefile
+
 ## Documenation
 
 See http://cirlabs.github.io/pesticides_data/
