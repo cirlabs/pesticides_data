@@ -107,40 +107,16 @@
 <tr>
   <td>top_chemicals</td>
   <td>Array/JSON object</td>
-  <td>See below</td>
+  <td>The top five chemicals applied in this grid by weight. May be fewer than five or 0. See below for attributes.</td>
 </tr>
 <tr>
   <td>top_chemicals_of_concern</td>
   <td>Array/JSON object</td>
-  <td>See below</td>
+  <td>The top five chemicals of public health concern applied in this grid by weight. May be fewer than five or 0. See below for attributes.</td>
 </tr>
 </table>
 
-<h4>Top chemicals</h4>
-<table>
-  <tr>
-    <th>Attribute name</th>
-    <th>Data type</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>chem_id</td>
-    <td>Integer</td>
-    <td>Primary key of chemical, not the Department of Pesticide Regulation's code.</td>
-  </tr>
-  <tr>
-    <td>chem_name</td>
-    <td>String</td>
-    <td>In all caps.</td>
-  </tr>
-  <tr>
-    <td>lbs</td>
-    <td>Integer</td>
-    <td>Rounded to nearest integer.</td>
-  </tr>
-</table>
-
-<h4>Top chemicals of concern</h4>
+<h4>Top chemicals/Top chemicals of concern</h4>
 <table>
   <tr>
     <th>Attribute name</th>
