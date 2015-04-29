@@ -1,3 +1,7 @@
+## Documenation
+
+See http://cirlabs.github.io/pesticides_data/
+
 ## Credit
 
 By accepting the attached data, you acknowledge that you've agreed agree to the following terms:
@@ -11,9 +15,3 @@ By accepting the attached data, you acknowledge that you've agreed agree to the 
 - Do not resell the data.
 
 - If you have unresolved questions about using the data, please contact our news applications developer Michael Corey at mcorey@cironline.org.
-
-## Files
-
-1. data.csv / data.json - Data we collected for armed security guard regulations in each state.
-
-2. GUIDE.txt - Documentation for the columns in data.csv/data.json as well as notes about the data.
