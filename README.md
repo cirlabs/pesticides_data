@@ -18,11 +18,11 @@ See http://cirlabs.github.io/pesticides_data/
 
 By accepting the attached data, you acknowledge that you've agreed agree to the following terms:
 
-- If you use our data in a story or written post, you must credit The Center for Investigative Reporting and link to our website: revealnews.org, either in the body text, or as a footer/sidebar. Example language for crediting: “Data in this story was provided by The Center for Investigative Reporting, an independent, nonprofit newsroom. For more, visit revealnews.org.” Please include our logo, which is included in the .tar.gz or .zip file you downloaded. You may choose the size that works for your website.
+- If you use our data in a story or written post, you must credit Reveal and link to our website: revealnews.org, either in the body text, or as a footer/sidebar. Example language for crediting: “Data in this story was provided by Reveal, from The Center for Investigative Reporting, an independent, nonprofit newsroom. For more, visit revealnews.org.” Please include our logo, which is included in the .tar.gz or .zip file you downloaded. You may choose the size that works for your website.
 
-- If you republish the data in a visual presentation -- as a table, in a graphic, etc -- please include CIR’s logo in or near the product and include the phrase “Data provided by The Center for Investigative Reporting.”
+- If you republish the data in a visual presentation -- as a table, in a graphic, etc -- please include Reveal's logo in or near the product and include the phrase “Data provided by Reveal, from The Center for Investigative Reporting.”
 
-- Email Cole Goins, CIR’s Distribution and Engagement Manager, at cgoins@cironline.org with a link to any content you publish using this data.
+- Email Cole Goins, Reveal's Distribution and Engagement Manager, at cgoins@cironline.org with a link to any content you publish using this data.
 
 - Do not resell the data.
 
